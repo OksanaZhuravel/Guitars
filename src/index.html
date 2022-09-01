@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"Rhythm" })
+
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section class="page-promo promo">
+          <div class="promo__container">
+            <div class="promo__body">
+              <h1 class="promo__title">
+                Browse top quality
+                <span class="promo__title promo__title--color">Guitars</span>
+                online
+              </h1>
+              <p class="promo__text">
+                Explore 50k+ latest collections of&nbsp;branded guitars online with
+                Rhythm.
+              </p>
+              <div class="promo__buttons">
+                <button type="button" class="button button__promo">Get the App</button>
+                <button type="button" class="button button__promo">
+                  <img src="@img/general/grupLogo.svg" alt="Logo"></button>
+                <button type="button" class="button button__promo">
+                  <img src="@img/general/appleLogo.svg" alt="Logo"></button>
+              </div>
+            </div>
+          </div>
+          <div class="promo__slider swiper">
+            <div class="promo__wrapper swiper-wrapper">
+              <!-- Слайд -->
+              <div class="promo__slide swiper-slide">
+                <img src="@img/main/header.png" alt="Guitars" />
+              </div>
+              <div class="promo__slide swiper-slide">
+                <img src="@img/main/header2.png" alt="Guitars" />
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <section class="page-store store">
+          <div class="store__container">
+            <h2 class="store__title">Check out the <span class="store__title store__title--color">Store</span></h2>
+            @@include('html/_product.htm', {
+            "title":"NEW ON THE BOARD"
+            })
+            @@include('html/_products.htm', {
+            "title":"TOP SELLING"
+            })
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+  </body>
+
+</html>
