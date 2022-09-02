@@ -15,47 +15,243 @@
                 online
               </h1>
               <p class="promo__text">
-                Explore 50k+ latest collections of&nbsp;branded guitars online with
-                Rhythm.
+                Explore 50k+ latest collections of&nbsp;branded guitars online
+                with Rhythm.
               </p>
-              <div class="promo__buttons">
-                <button type="button" class="button button__promo">Get the App</button>
+              <div class="promo__inner">
                 <button type="button" class="button button__promo">
-                  <img src="@img/general/grupLogo.svg" alt="Logo"></button>
-                <button type="button" class="button button__promo">
-                  <img src="@img/general/appleLogo.svg" alt="Logo"></button>
+                  Get the App
+                </button>
+
+                <div class="promo__buttons">
+                  <button type="button" class="button__promo">
+                    <img src="@img/general/grupLogo.svg" alt="Logo" />
+                  </button>
+                  <button type="button" class="button__promo">
+                    <img src="@img/general/appleLogo.svg" alt="Logo" />
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="promo__slider swiper">
-            <div class="promo__wrapper swiper-wrapper">
-              <!-- Слайд -->
-              <div class="promo__slide swiper-slide">
-                <img src="@img/main/header.png" alt="Guitars" />
+
+            <div class="promo__slider swiper">
+              <div class="promo__wrapper swiper-wrapper">
+                <!-- Слайд -->
+                <div class="promo__slide swiper-slide">
+                  <img src="@img/main/header.png" alt="Guitars" />
+                </div>
+                <div class="promo__slide swiper-slide">
+                  <img src="@img/main/header2.png" alt="Guitars" />
+                </div>
               </div>
-              <div class="promo__slide swiper-slide">
-                <img src="@img/main/header2.png" alt="Guitars" />
-              </div>
+              <div class="swiper-pagination"></div>
             </div>
-            <div class="swiper-pagination"></div>
           </div>
         </section>
         <section class="page-store store">
           <div class="store__container">
-            <h2 class="store__title">Check out the <span class="store__title store__title--color">Store</span></h2>
-            @@include('html/_product.htm', {
-            "title":"NEW ON THE BOARD"
-            })
-            @@include('html/_products.htm', {
-            "title":"TOP SELLING"
-            })
+            <h2 class="store__title">
+              Check out the
+              <span class="store__title store__title--color">Store</span>
+            </h2>
+            @@include('html/_product.htm', { "title":"NEW ON THE BOARD" })
+            @@include('html/_products.htm', { "title":"TOP SELLING" })
           </div>
         </section>
         <section class="page-categories categories">
           <div class="categories__container">
-            <h2 class="categories__title">Choose based on <span
-                class="categories__title categories__title--color">Categories</span></h2>
-
+            <h2 class="categories__title">
+              Choose based on
+              <span class="categories__title categories__title--color">Categories</span>
+            </h2>
+            <ul class="categories__list">
+              <li class="categories__item">
+                <a href="" class="categories__link">
+                  <img src="@img/categories/1.png" alt="Categories" class="categories__img" />
+                  <span class="categories__text">Acoustic</span>
+                </a>
+              </li>
+              <li class="categories__item">
+                <a href="" class="categories__link">
+                  <img src="@img/categories/2.png" alt="Categories" class="categories__img" />
+                  <span class="categories__text">Electric</span></a>
+              </li>
+              <li class="categories__item">
+                <a href="" class="categories__link">
+                  <img src="@img/categories/3.png" alt="Categories" class="categories__img" />
+                  <span class="categories__text">Basses</span></a>
+              </li>
+              <li class="categories__item">
+                <a href="" class="categories__link">
+                  <img src="@img/categories/4.png" alt="Categories" class="categories__img" />
+                  <span class="categories__text">Collections</span></a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="brands page-brands">
+          <div class="brands__container">
+            <h2 class="brands__title">
+              Featuring the
+              <span class="brands__title brands__title--color">
+                Best Brands</span>
+            </h2>
+            <div class="brands__wrap">
+              <ul class="brands__list">
+                <li class="brands__item">
+                  <a href="" class="brands__link"><img src="@img/brands/1.svg" alt="brands" class="brands__img" /></a>
+                </li>
+                <li class="brands__item">
+                  <a href="" class="brands__link"><img src="@img/brands/2.svg" alt="brands" class="brands__img" /></a>
+                </li>
+                <li class="brands__item">
+                  <a href="" class="brands__link"><img src="@img/brands/3.svg" alt="brands" class="brands__img" /></a>
+                </li>
+                <li class="brands__item">
+                  <a href="" class="brands__link"><img src="@img/brands/4.svg" alt="brands" class="brands__img" /></a>
+                </li>
+                <li class="brands__item">
+                  <a href="" class="brands__link"><img src="@img/brands/5.svg" alt="brands" class="brands__img" /></a>
+                </li>
+                <li class="brands__item">
+                  <a href="" class="brands__link"><img src="@img/brands/6.svg" alt="brands" class="brands__img" /></a>
+                </li>
+                <li class="brands__item">
+                  <a href="" class="brands__link"><img src="@img/brands/7.svg" alt="brands" class="brands__img" /></a>
+                </li>
+                <li class="brands__item">
+                  <a href="" class="brands__link"><img src="@img/brands/8.svg" alt="brands" class="brands__img" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="about page-about">
+          <div class="about__container">
+            <h2 class="about__title">
+              Why try<span class="about__title about__title--color">
+                Rhythm?</span>
+            </h2>
+            <ul class="about__list">
+              <li class="about__item">
+                <p class="about__subtitle">Smooth Browsing</p>
+                <p class="about__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </li>
+              <li class="about__item">
+                <p class="about__subtitle">EASY Delivery</p>
+                <p class="about__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </li>
+              <li class="about__item">
+                <p class="about__subtitle">SwiFT PAYMENTS</p>
+                <p class="about__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="page-reviews reviews">
+          <div class="reviews__container">
+            <h2 class="reviews__title">
+              What our
+              <span class="reviews__title reviews__title--color">customer&rsquo;s </span>say
+            </h2>
+            <!-- Оболочка слайдера -->
+            <div class="reviews__slider swiper">
+              <!-- Двигающееся часть слайдера -->
+              <div class="reviews__wrapper swiper-wrapper">
+                <!-- Слайд -->
+                <div class="reviews__slide swiper-slide">
+                  <div class="reviews__wrap">
+                    <div class="reviews__img">
+                      <img src="@img/reviews/avatar.png" alt="Avatar" />
+                    </div>
+                    <div class="reviews__body">
+                      <p class="reviews__text">
+                        &laquo;The Quality and Delivery is&nbsp;always on&nbsp;time, being a
+                        professional guitarist myself&nbsp;I love the customer
+                        service the brand provides, highly recommend Rhythm
+                        anytime.&raquo;
+                      </p>
+                      <p class="reviews__name">Ryan Wels</p>
+                      <p class="reviews__profession">PROFESSIONAL GUITARIST</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__slide swiper-slide">
+                  <div class="reviews__wrap">
+                    <div class="reviews__img">
+                      <img src="@img/reviews/avatar.png" alt="Avatar" />
+                    </div>
+                    <div class="reviews__body">
+                      <p class="reviews__text">
+                        &laquo;The Quality and Delivery is&nbsp;always on&nbsp;time, being a
+                        professional guitarist myself&nbsp;I love the customer
+                        service the brand provides, highly recommend Rhythm
+                        anytime.&raquo;
+                      </p>
+                      <p class="reviews__name">Ryan Wels</p>
+                      <p class="reviews__profession">PROFESSIONAL GUITARIST</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__slide swiper-slide">
+                  <div class="reviews__wrap">
+                    <div class="reviews__img">
+                      <img src="@img/reviews/avatar.png" alt="Avatar" />
+                    </div>
+                    <div class="reviews__body">
+                      <p class="reviews__text">
+                        &laquo;The Quality and Delivery is&nbsp;always on&nbsp;time, being a
+                        professional guitarist myself&nbsp;I love the customer
+                        service the brand provides, highly recommend Rhythm
+                        anytime.&raquo;
+                      </p>
+                      <p class="reviews__name">Ryan Wels</p>
+                      <p class="reviews__profession">PROFESSIONAL GUITARIST</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="reviews__slide swiper-slide">
+                  <div class="reviews__wrap">
+                    <div class="reviews__img">
+                      <img src="@img/reviews/avatar.png" alt="Avatar" />
+                    </div>
+                    <div class="reviews__body">
+                      <p class="reviews__text">
+                        &laquo;The Quality and Delivery is&nbsp;always on&nbsp;time, being a
+                        professional guitarist myself&nbsp;I love the customer
+                        service the brand provides, highly recommend Rhythm
+                        anytime.&raquo;
+                      </p>
+                      <p class="reviews__name">Ryan Wels</p>
+                      <p class="reviews__profession">PROFESSIONAL GUITARIST</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="reviews__pagination swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+        <section class="page-buy buy">
+          <div class="buy__container">
+            <div class="buy__body">
+              <h2 class="buy__title">
+                Browse and buy your
+                <span class="buy__title buy__title--color">favorite guitars</span>
+                with Rhythm.
+              </h2>
+              <div class="buy__inner">
+                <a href="" class="buy__link"><img src="@img/buy/storegoogle.png" alt="Google pay" /></a>
+                <a href="" class="buy__link"><img src="@img/buy/storegoogle.png" alt="Apple Store" /></a>
+              </div>
+            </div>
+            <div class="buy__decor"></div>
           </div>
         </section>
       </main>
