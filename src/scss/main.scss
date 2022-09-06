@@ -1,12 +1,55 @@
 //====================================================================================================
-.page-promo {
+.page {
+  &-promo {
+  }
+  &-store {
+  }
+  &-categories {
+  }
+  &-brands {
+  }
+  &-about {
+  }
+  &-reviews {
+  }
 }
 //==========================================================================================================================================
 
 .promo {
+  background-color: $bag;
   &__container {
+    @include adaptiveValue('padding-top', 80, 40);
+    @include adaptiveValue('padding-bottom', 140, 80);
+    // padding-top: rem(81);
+    // padding-bottom: rem(140);
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // min-height: rem(512);
   }
-
+  &__decor {
+    position: absolute;
+    top: rem(-154);
+    right: 0;
+    z-index: 1;
+    &::after {
+      content: '';
+      display: block;
+      z-index: 2;
+      border-radius: 50%;
+      position: absolute;
+      bottom: rem(-40);
+      left: 50%;
+      width: rem(80);
+      height: rem(80);
+      background-color: $bag;
+      background: url('@img/general/logo2.svg') center / cover no-repeat;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
   &__body {
     max-width: rem(469);
   }
@@ -42,7 +85,244 @@
     display: flex;
     gap: rem(40);
   }
+}
+
+//====================================================================================================
+.store {
+  background-color: $bag;
+  &__container {
+    @include adaptiveValue('padding-top', 80, 40);
+    @include adaptiveValue('padding-bottom', 80, 40);
+    text-align: center;
+  }
+  &__title {
+    font-family: 'CalSans';
+    font-weight: 600;
+    @include adaptiveValue('font-size', 44, 24);
+    line-height: math.div(53, 44);
+
+    &--color {
+      color: $accent;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(86);
+    }
+  }
+}
+//==========================================================================================================================================
+.categories {
+  background-color: $bag;
+  &__container {
+    @include adaptiveValue('padding-top', 100, 40);
+    @include adaptiveValue('padding-bottom', 110, 40);
+  }
+
+  &__title {
+    text-align: center;
+    font-family: 'CalSans';
+    font-weight: 600;
+    @include adaptiveValue('font-size', 44, 24);
+    line-height: math.div(53, 44);
+
+    &--color {
+      color: $accent;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(86);
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: rem(69);
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 220px);
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+  }
+
+  &__img {
+  }
+
+  &__text {
+    position: absolute;
+    bottom: rem(30);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    line-height: math.div(30, 20);
+    font-size: rem(20);
+    text-align: center;
+
+    color: $bag;
+  }
+}
+//==========================================================================================================================================
+.brands {
+  background-color: $bag;
+  &__container {
+    @include adaptiveValue('padding-top', 110, 40);
+    @include adaptiveValue('padding-bottom', 180, 40);
+  }
+
+  &__title {
+    text-align: center;
+
+    font-family: 'CalSans';
+    font-weight: 600;
+    @include adaptiveValue('font-size', 44, 24);
+    line-height: math.div(53, 44);
+
+    &--color {
+      color: $accent;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(86);
+    }
+  }
+
+  &__wrap {
+  }
+
+  &__list {
+    display: grid;
+    row-gap: rem(80);
+    column-gap: rem(160);
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 152px);
+  }
+
+  &__item {
+  }
+
+  &__link {
+  }
+
+  &__img {
+  }
+}
+//==========================================================================================================================================
+.about {
+  color: $bag;
+  background-color: $mainColor;
+  &__container {
+    @include adaptiveValue('padding-top', 94, 40);
+    @include adaptiveValue('padding-bottom', 93, 40);
+  }
+
+  &__title {
+    text-align: center;
+
+    font-family: 'CalSans';
+    font-weight: 600;
+    @include adaptiveValue('font-size', 44, 24);
+    line-height: math.div(53, 44);
+
+    &--color {
+      color: $accent;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(75);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 220px;
+  }
+
+  &__item {
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    gap: rem(12);
+    text-align: center;
+    transition: all 0.5s ease 0s;
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+    }
+    &::before {
+      width: rem(72);
+      height: rem(72);
+      background-color: $bagBlack;
+      border-radius: rem(20);
+      margin-bottom: rem(28);
+    }
+    &::after {
+      position: absolute;
+      top: rem(36);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: rem(32);
+      height: rem(32);
+    }
+    &--browsing {
+      &::after {
+        background: url('@img/general/icon1.svg') center / contain no-repeat;
+      }
+    }
+    &--delivery {
+      &::after {
+        background: url('@img/general/icon2.svg') center / contain no-repeat;
+      }
+    }
+    &--pay {
+      &::after {
+        background: url('@img/general/icon3.svg') center / contain no-repeat;
+      }
+    }
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    line-height: math.div(27, 18);
+    font-size: rem(18);
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-weight: 400;
+    line-height: math.div(21, 14);
+    text-transform: capitalize;
+    color: $colorGrey;
+  }
+}
+//==========================================================================================================================================
+
+.reviews {
+  background-color: $bag;
+  &__container {
+    @include adaptiveValue('padding-top', 241, 40);
+    @include adaptiveValue('padding-bottom', 240, 40);
+  }
+
+  &__title {
+    text-align: center;
+
+    font-family: 'CalSans';
+    font-weight: 600;
+    @include adaptiveValue('font-size', 44, 24);
+    line-height: math.div(53, 44);
+
+    &--color {
+      color: $accent;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(109);
+    }
+  }
+
   &__slider {
+    position: relative;
   }
 
   &__wrapper {
@@ -50,6 +330,67 @@
 
   &__slide {
   }
+
+  &__wrap {
+    display: grid;
+    gap: rem(146);
+    grid-template-columns: rem(407) rem(524);
+    justify-items: center;
+    align-items: center;
+    justify-content: end;
+  }
+
+  &__img {
+    justify-self: end;
+    position: relative;
+    img {
+      z-index: 2;
+      position: relative;
+      // border-radius: 50%;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 38px;
+      left: -81px;
+      z-index: 1;
+      display: block;
+      width: rem(285);
+      height: rem(258);
+      background-color: $accent;
+      border-radius: 40px 0px 400px 400px;
+      transform: rotate(-7.72deg);
+    }
+  }
+
+  &__body {
+    font-size: rem(24);
+    line-height: math.div(38, 24);
+  }
+
+  &__text {
+    font-weight: 400;
+
+    color: $colorGrey;
+  }
+
+  &__name {
+    font-weight: 600;
+    color: $colorBlack;
+    margin: rem(56) 0 rem(8) 0;
+  }
+
+  &__profession {
+    font-weight: 500;
+    line-height: math.div(29, 18);
+    font-size: rem(18);
+    letter-spacing: 0.08em;
+
+    color: $colorGrey2;
+  }
+
+  &__pagination {
+  }
 }
 
-//====================================================================================================
+//==========================================================================================================================================
