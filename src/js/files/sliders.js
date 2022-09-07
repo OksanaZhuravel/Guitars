@@ -114,7 +114,7 @@ function initSliders() {
       observer: true,
       observeParents: true,
       slidesPerView: 1,
-      spaceBetween: 0,
+      spaceBetween: 20,
       // autoHeight: true,
       speed: 800,
       watchOverflow: true,
@@ -126,17 +126,16 @@ function initSliders() {
 
       // Эффекты
       // effect: 'fade',
-      // autoplay: {
-      //   delay: 3000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
 
       // Пагинация
 
       pagination: {
         el: '.reviews__dotts',
         clickable: true,
-        dynamicBullets: true,
       },
 
       // Скроллбар

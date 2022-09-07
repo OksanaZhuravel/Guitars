@@ -32,6 +32,12 @@
   &__more {
     font-weight: 500;
     color: $colorMore;
+    transition: all 0.8s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accent;
+      }
+    }
   }
 
   &__slider {
@@ -93,8 +99,8 @@
 //==========================================================================================================================================
 .dotts {
   position: absolute;
-  bottom: rem(60);
-  right: rem(-35);
+  bottom: rem(35);
+  right: rem(20);
   display: grid;
   grid-auto-flow: column;
   justify-content: center;
@@ -102,6 +108,7 @@
   transform: translate(0, 10%);
   margin: 0 auto;
   height: rem(22);
+
   // overflow: hidden;
   & .swiper-pagination-bullet {
     margin: 0 rem(8);

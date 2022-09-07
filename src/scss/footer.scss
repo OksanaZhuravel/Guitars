@@ -1,3 +1,132 @@
 //====================================================================================================
+.footer {
+  background-color: $bagGrey;
+  &__container {
+    @include adaptiveValue('padding-top', 80, 40);
+    @include adaptiveValue('padding-bottom', 43, 20);
+    display: grid;
+    grid-template-columns: rem(220) 1fr;
+    justify-items: center;
+    column-gap: rem(255);
+    justify-items: center;
+  }
+
+  &__column {
+    display: grid;
+    gap: rem(20);
+    align-content: center;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: rem(8);
+    img {
+      width: rem(202);
+      height: rem(48);
+    }
+  }
+
+  &__link {
+    display: flex;
+    gap: rem(20);
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: math.div(26, 16);
+    color: $colorGrey;
+    transition: all 0.8s ease 0s;
+    @extend %ic;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 160px;
+    justify-self: start;
+  }
+
+  &__spollers {
+    &--page {
+      // margin-right: rem(126);
+      @include adaptiveValue('margin-right', 126, 20);
+    }
+
+    &--product {
+      // margin-right: rem(161);
+      @include adaptiveValue('margin-right', 161, 20);
+    }
+
+    &--social {
+    }
+  }
+
+  &__copy {
+    grid-column: 1/3;
+
+    @include adaptiveValue('padding-top', 80, 40);
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: math.div(26, 16);
+    color: rgba($color: $mainColor, $alpha: 0.6);
+  }
+}
 
 //====================================================================================================
+.spollers {
+  &__item {
+    min-width: rem(109);
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: rem(18);
+    line-height: math.div(27, 18);
+    text-transform: uppercase;
+  }
+
+  &__body {
+  }
+
+  &__list {
+    display: grid;
+    gap: rem(16);
+  }
+
+  &__link {
+    font-family: 'Poppins';
+    color: rgba($color: $mainColor, $alpha: 0.6);
+
+    font-weight: 400;
+    font-size: rem(16);
+    line-height: math.div(24, 16);
+    transition: all 0.8s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+}
+//==========================================================================================================================================
+.social {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: rem(32);
+  & .spollers__item {
+    min-width: rem(32);
+  }
+  & .spollers__link {
+    @extend %ic;
+    &::before {
+      // content:'';
+      font-size: rem(34);
+    }
+  }
+}

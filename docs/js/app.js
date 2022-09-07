@@ -3769,14 +3769,17 @@
             observer: true,
             observeParents: true,
             slidesPerView: 1,
-            spaceBetween: 0,
+            spaceBetween: 20,
             speed: 800,
             watchOverflow: true,
             loop: true,
+            autoplay: {
+                delay: 3e3,
+                disableOnInteraction: false
+            },
             pagination: {
                 el: ".reviews__dotts",
-                clickable: true,
-                dynamicBullets: true
+                clickable: true
             },
             on: {}
         });

@@ -43,7 +43,7 @@
     font-size: rem(16);
     line-height: math.div(24, 16);
     color: rgba($color: $mainColor, $alpha: 0.4);
-    transition: all 0.3s ease 0s;
+    transition: all 0.8s ease 0s;
     @media (any-hover: hover) {
       &:hover {
         color: $accent;
