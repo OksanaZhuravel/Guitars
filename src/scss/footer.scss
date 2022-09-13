@@ -4,11 +4,17 @@
   &__container {
     @include adaptiveValue('padding-top', 80, 40);
     @include adaptiveValue('padding-bottom', 43, 20);
+    @include adaptiveValue('padding-left', 120, 25);
+    @include adaptiveValue('padding-right', 120, 25);
     display: grid;
-    grid-template-columns: rem(220) 1fr;
+    @include adaptiveValue('column-gap', 255, 10);
     justify-items: center;
-    column-gap: rem(255);
+    row-gap: rem(15);
     justify-items: center;
+    @media (min-width: $mobile) {
+      grid-template-columns: rem(220) 1fr;
+      row-gap: 0;
+    }
   }
 
   &__column {
@@ -43,20 +49,30 @@
   }
 
   &__body {
+    width: 100%;
+
     display: grid;
-    grid-template-columns: repeat(2, 1fr) 160px;
-    justify-self: start;
+    @include adaptiveValue('gap', 45, 10);
+    @media (min-width: $mobile) {
+      width: auto;
+      grid-template-columns: repeat(auto-fill, 200px) 20%;
+    }
+    @media (min-width: $tablet) {
+      justify-self: start;
+      grid-template-columns: repeat(auto-fill, 220px) 50%;
+    }
+    @media (min-width: em(1390)) {
+      grid-template-columns: repeat(2, 1fr) 160px;
+    }
   }
 
   &__spollers {
     &--page {
-      // margin-right: rem(126);
-      @include adaptiveValue('margin-right', 126, 20);
+      @include adaptiveValue('margin-right', 126, 0);
     }
 
     &--product {
-      // margin-right: rem(161);
-      @include adaptiveValue('margin-right', 161, 20);
+      @include adaptiveValue('margin-right', 161, 0);
     }
 
     &--social {
@@ -64,9 +80,10 @@
   }
 
   &__copy {
-    grid-column: 1/3;
-
     @include adaptiveValue('padding-top', 80, 40);
+    @media (min-width: $tablet) {
+      grid-column: 1/3;
+    }
   }
 
   &__text {
@@ -80,7 +97,6 @@
 //====================================================================================================
 .spollers {
   &__item {
-    min-width: rem(109);
   }
 
   &__title {
@@ -125,7 +141,6 @@
   & .spollers__link {
     @extend %ic;
     &::before {
-      // content:'';
       font-size: rem(34);
     }
   }

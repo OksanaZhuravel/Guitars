@@ -7,7 +7,10 @@
 .product {
   background-color: $bag;
   &:not(:last-child) {
-    margin-bottom: rem(96);
+    margin-bottom: rem(60);
+    @media (min-width: $mobile) {
+      margin-bottom: rem(96);
+    }
   }
   &__container {
   }
@@ -16,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: rem(20);
+    @include adaptiveValue('font-size', 20, 16);
     line-height: math.div(30, 20);
     &:not(:last-child) {
       margin-bottom: rem(32);
@@ -25,7 +28,6 @@
 
   &__title {
     font-weight: 600;
-
     letter-spacing: 0.08em;
   }
 
@@ -54,8 +56,9 @@
 .product-card {
   display: grid;
   gap: rem(40);
-  width: 364px;
-  height: 282px;
+  max-width: rem(364);
+  height: rem(282);
+
   &__image {
   }
 
@@ -98,17 +101,20 @@
 }
 //==========================================================================================================================================
 .dotts {
-  position: absolute;
-  bottom: rem(35);
-  right: rem(20);
   display: grid;
   grid-auto-flow: column;
   justify-content: center;
   align-items: center;
   transform: translate(0, 10%);
   margin: 0 auto;
+  padding-top: rem(10);
   height: rem(22);
-
+  @media (min-width: $mobile) {
+    position: absolute;
+    bottom: rem(35);
+    right: rem(20);
+    padding-top: 0;
+  }
   // overflow: hidden;
   & .swiper-pagination-bullet {
     margin: 0 rem(8);
